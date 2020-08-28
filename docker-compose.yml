@@ -3,8 +3,8 @@ version: '2.4'
 services:
   db:
     image: postgres:12.4
-    environment:
-      - POSTGRES_PASSWORD=YOUR_PASS
+    env_file:
+      - ./.env-postgres
     volumes:
       - db-data:/var/lib/postgresql/data
 
@@ -25,10 +25,8 @@ services:
     image: dpage/pgadmin4:4.25
     ports:
       - '5050:5050'
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=user@domain.com
-      - PGADMIN_DEFAULT_PASSWORD=YOUR_PASS
-      - PGADMIN_LISTEN_PORT=5050
+    env_file:
+      - ./.env-pgadmin
     depends_on:
       - db
 

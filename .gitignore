@@ -35,3 +35,5 @@ lerna-debug.log*
 
 # Environment
 .env
+.env-postgres
+.env-pgadmin
