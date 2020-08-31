@@ -1,4 +1,4 @@
-FROM node:14.8.0-alpine3.10 as base
+FROM node:12.18.3-alpine3.10 as base
 ENV NODE_ENV=production
 
 EXPOSE 3000
