@@ -26,6 +26,7 @@ import { AuthModule } from './auth/auth.module';
     // TypeOrmModule.forRootAsync(typeOrmProvider),
     TypeOrmModule.forRoot(typeOrmConfig),
     TasksModule,
+    AuthModule
   ],
 })
 export class AppModule {}
